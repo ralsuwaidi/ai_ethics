@@ -1,29 +1,23 @@
-import FormWrapper from "./components/FormWrapper";
 import PageWrapper from "./components/PageWrapper";
-import RadioOption from "./components/RadioOption";
-import RadioWrapper from "./components/RadioWrapper";
+import Part1 from "./part1/Part1";
+import Part2 from "./part1/Part2";
+import Part3 from "./part1/Part3";
+import Part4 from "./part1/Part4";
+import Part5 from "./part1/Part5";
+import Part6 from "./part1/Part6";
 
 export default function Toolkit() {
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(event.target.checked)
-    }
-
-    const onChangeValue = (event) => {
-        console.log(event.target.value);
-    }
 
     return (
         <>
             <PageWrapper>
-                <FormWrapper handleSubmit={handleSubmit} title="Test Title" description="test description">
-                    <RadioWrapper name="Name" description="description" onChangeValue={onChangeValue}>
-                        <RadioOption name="Same as Wow" id="push-notifications" value="Same as" />
-                        <RadioOption name="Same as Email" id="push-notifications" value="Same as" />
-                        <RadioOption name="Same as Email" id="push-notifications" value="Same as" />
-                    </RadioWrapper>
-                </FormWrapper>
+                <Part1 />
+                <Part2 />
+                <Part3 />
+                <Part4 />
+                <Part5 />
+                <Part6 />
             </PageWrapper>
         </>
     );
