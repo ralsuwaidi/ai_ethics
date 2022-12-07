@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/toolkit/static/css/main.ea5a5787.css",
-    "main.js": "/toolkit/static/js/main.5d5f2605.js",
-    "static/js/787.15751c23.chunk.js": "/toolkit/static/js/787.15751c23.chunk.js",
-    "index.html": "/toolkit/index.html",
-    "main.ea5a5787.css.map": "/toolkit/static/css/main.ea5a5787.css.map",
-    "main.5d5f2605.js.map": "/toolkit/static/js/main.5d5f2605.js.map",
-    "787.15751c23.chunk.js.map": "/toolkit/static/js/787.15751c23.chunk.js.map"
+    "main.css": "/ai_ethics/static/css/main.ea5a5787.css",
+    "main.js": "/ai_ethics/static/js/main.c9cf0fdc.js",
+    "static/js/787.15751c23.chunk.js": "/ai_ethics/static/js/787.15751c23.chunk.js",
+    "index.html": "/ai_ethics/index.html",
+    "main.ea5a5787.css.map": "/ai_ethics/static/css/main.ea5a5787.css.map",
+    "main.c9cf0fdc.js.map": "/ai_ethics/static/js/main.c9cf0fdc.js.map",
+    "787.15751c23.chunk.js.map": "/ai_ethics/static/js/787.15751c23.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ea5a5787.css",
-    "static/js/main.5d5f2605.js"
+    "static/js/main.c9cf0fdc.js"
   ]
 }
