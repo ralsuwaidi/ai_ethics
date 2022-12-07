@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ai_ethics/static/css/main.ea5a5787.css",
-    "main.js": "/ai_ethics/static/js/main.3a43a862.js",
+    "main.css": "/ai_ethics/static/css/main.25903d4b.css",
+    "main.js": "/ai_ethics/static/js/main.9d81d723.js",
     "static/js/787.15751c23.chunk.js": "/ai_ethics/static/js/787.15751c23.chunk.js",
     "index.html": "/ai_ethics/index.html",
-    "main.ea5a5787.css.map": "/ai_ethics/static/css/main.ea5a5787.css.map",
-    "main.3a43a862.js.map": "/ai_ethics/static/js/main.3a43a862.js.map",
+    "main.25903d4b.css.map": "/ai_ethics/static/css/main.25903d4b.css.map",
+    "main.9d81d723.js.map": "/ai_ethics/static/js/main.9d81d723.js.map",
     "787.15751c23.chunk.js.map": "/ai_ethics/static/js/787.15751c23.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea5a5787.css",
-    "static/js/main.3a43a862.js"
+    "static/css/main.25903d4b.css",
+    "static/js/main.9d81d723.js"
   ]
 }
