@@ -4,7 +4,9 @@ import FormWrapper from "../components/FormWrapper";
 import RadioWrapper from "../components/RadioWrapper";
 import { part4_func, part_4 } from "./part4_data";
 
-export default function Part4() {
+
+
+export default function Part4(props) {
     const [q1, setq1] = useState(false)
     const [q2, setq2] = useState(false)
     const [q3, setq3] = useState(false)
@@ -13,22 +15,16 @@ export default function Part4() {
     const [q6, setq6] = useState(false)
     const [q7, setq7] = useState(false)
     const [q8, setq8] = useState(false)
-    const [score, setScore] = useState(0)
 
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(event.target.value)
+        props.setScore(part4_func(getScore()).number)
     }
 
     const onChangeValue = (event) => {
         const name = event.target.name
-        const value = event.target.value
         const checked = event.target.checked
-
-        console.log(name)
-        console.log(value)
-        console.log(checked)
 
         if (name === "q1") {
             setq1(checked)
@@ -61,6 +57,7 @@ export default function Part4() {
         if (name === "q8") {
             setq8(checked)
         }
+
     }
 
     function getScore(){

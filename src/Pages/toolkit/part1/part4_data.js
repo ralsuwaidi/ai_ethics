@@ -19,15 +19,19 @@ const part_4 = [
 
 function part4_func(score){
     let name = ""
+    let final_score = 0
     if (score <=2) {
         name = "High"
+        final_score = 3
     } else if(score>=6) {
         name = "Low"
+        final_score = 1
     } else {
         name = "Medium"
+        final_score = 2
     }
 
-    return {name: name, number: score}
+    return {name: name, number: final_score}
 }
 
 
