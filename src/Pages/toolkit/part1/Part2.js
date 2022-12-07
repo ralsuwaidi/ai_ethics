@@ -2,6 +2,7 @@ import { useState } from "react";
 import FormWrapper from "../components/FormWrapper";
 import RadioOption from "../components/RadioOption";
 import RadioWrapper from "../components/RadioWrapper";
+import ResultComponent from "../components/ResultComponent";
 import { part_2_1, part_2_1_func } from "./part2_data";
 
 export default function Part2() {
@@ -32,7 +33,10 @@ export default function Part2() {
         if (q_2_1 != 0 && q_2_2 != 0) {
             q_2_3 = part_2_1_func(q_2_1, q_2_2).number
             return (
-                <p>{part_2_1_func(q_2_1, q_2_2).name}</p>
+                <ResultComponent 
+                name="Appropriate Use Risk Score"
+                result={part_2_1_func(q_2_1, q_2_2).name} 
+                />
             )
         }
     }

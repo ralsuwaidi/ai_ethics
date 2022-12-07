@@ -2,6 +2,7 @@ import { useState } from "react";
 import FormWrapper from "../components/FormWrapper";
 import RadioOption from "../components/RadioOption";
 import RadioWrapper from "../components/RadioWrapper";
+import ResultComponent from "../components/ResultComponent";
 import { part_6_1, part_6_2, part_6_1_func, part_6_2_func, part_6_3_func, part_6_4_func } from "./part6_data";
 
 export default function Part6(props) {
@@ -44,7 +45,10 @@ export default function Part6(props) {
         if (q_6_1_1 != 0 && q_6_1_2 != 0) {
             q_6_1_3 = part_6_1_func(q_6_1_1, q_6_1_2).number
             return (
-                <p>{part_6_1_func(q_6_1_1, q_6_1_2).name}</p>
+                <ResultComponent 
+                name="Inaccuracy Risk"
+                result={part_6_1_func(q_6_1_1, q_6_1_2).name} 
+                />
             )
         }
     }
@@ -53,7 +57,10 @@ export default function Part6(props) {
         if (q_6_2_1 != 0 && q_6_2_2 != 0) {
             q_6_2_3 = part_6_2_func(q_6_2_1, q_6_2_2).number
             return (
-                <p>{part_6_2_func(q_6_2_1, q_6_2_2).name}</p>
+                <ResultComponent 
+                name="Training Risk"
+                result={part_6_2_func(q_6_2_1, q_6_2_2).name} 
+                />
             )
         }
     }
@@ -61,9 +68,11 @@ export default function Part6(props) {
     const part_6_3_result = () => {
         if (q_6_2_3 != 0) {
             q_6_3 = part_6_3_func(props.q4_2, q_6_2_3).number
-            console.log("q is ", props.q4_2)
             return (
-                <p>{part_6_3_func(props.q4_2, q_6_2_3).name}</p>
+                <ResultComponent 
+                name="Methodology Risk"
+                result={part_6_3_func(props.q4_2, q_6_2_3).name} 
+                />
             )
         }
     }
@@ -72,7 +81,12 @@ export default function Part6(props) {
         if (q_6_3 != 0 && q_6_1_3 != 0) {
             console.log(q_6_3, q_6_1_3)
             return (
-                <p>{part_6_4_func(q_6_1_3, q_6_3).name}</p>
+
+                <ResultComponent 
+                name="Overall Technical Bias Risk"
+                result={part_6_4_func(q_6_1_3, q_6_3).name} 
+                />
+              
             )
         }
     }

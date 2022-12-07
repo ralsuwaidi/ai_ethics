@@ -2,6 +2,7 @@ import { useState } from "react";
 import FormWrapper from "../components/FormWrapper";
 import RadioOption from "../components/RadioOption";
 import RadioWrapper from "../components/RadioWrapper";
+import ResultComponent from "../components/ResultComponent";
 import { part_3_1, part_3_2  ,part_3_2_func, part_3_3_func } from "./part3_data";
 
 export default function Part3() {
@@ -37,7 +38,10 @@ export default function Part3() {
         if (q_3_2_2 != 0 && q_3_2_1 != 0) {
             q_3_2_3 = part_3_2_func(q_3_2_1, q_3_2_2).number
             return (
-                <p>{part_3_2_func(q_3_2_1, q_3_2_2).name}</p>
+                <ResultComponent 
+                name="Assign Accessibility Score"
+                result={part_3_2_func(q_3_2_1, q_3_2_2).name} 
+                />
             )
         }
     }
@@ -45,7 +49,10 @@ export default function Part3() {
     const part_3_3_result = () => {
         if (q_3_2_3 != 0 && q_3_1 != 0) {
             return (
-                <p>{part_3_3_func(q_3_2_3, q_3_1).name}</p>
+                <ResultComponent 
+                name="Assign Accountability Risk"
+                result={part_3_3_func(q_3_2_3, q_3_1).name} 
+                />
             )
         }
     }

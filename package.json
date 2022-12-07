@@ -1,7 +1,7 @@
 {
   "name": "directory",
   "version": "0.1.0",
-  "homepage": "https://ralsuwaidi.github.io/toolkit",
+  "homepage": "https://ralsuwaidi.github.io/ai_ethics",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.7.4",
