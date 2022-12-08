@@ -12,7 +12,7 @@ export default function CardList() {
 
   return (
     <>
-      <div class="md:grid md:grid-cols-3 md:gap-3">{directoryList}</div>
+      <div className="md:grid md:grid-cols-3 md:gap-3">{directoryList}</div>
     </>
   );
 }

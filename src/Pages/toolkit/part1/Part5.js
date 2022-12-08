@@ -27,7 +27,7 @@ export default function Part5() {
 
     return (
         <>
-            <FormWrapper handleSubmit={handleSubmit} title="Test Title" description="test description">
+            <FormWrapper handleSubmit={handleSubmit} title="Risk of Historic Bias" description="Understanding that bias will exist at the forefront of this conversation will benefit you as well as your algorithm’s consumers. This will allow you to direct your energy toward ensuring these biases are minimized.">
                 {part_5.map((question) => (
                     <RadioWrapper key={question.step} name={question.name} description={question.description} onChangeValue={onChangeValue}>
                         {question.options.map((option) => (

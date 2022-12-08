@@ -42,8 +42,13 @@ export default function Part6(props) {
     }
 
     const part_6_1_result = () => {
-        if (q_6_1_1 != 0 && q_6_1_2 != 0) {
+        if (q_6_1_1 !== 0 && q_6_1_2 !== 0) {
             q_6_1_3 = part_6_1_func(q_6_1_1, q_6_1_2).number
+
+            let result = props.result
+            result["part6"]["Inaccuracy Risk"]["result"] = part_6_1_func(q_6_1_1, q_6_1_2).name
+            props.setResult(result)
+
             return (
                 <ResultComponent 
                 name="Inaccuracy Risk"
@@ -54,8 +59,13 @@ export default function Part6(props) {
     }
 
     const part_6_2_result = () => {
-        if (q_6_2_1 != 0 && q_6_2_2 != 0) {
+        if (q_6_2_1 !== 0 && q_6_2_2 !== 0) {
             q_6_2_3 = part_6_2_func(q_6_2_1, q_6_2_2).number
+
+            let result = props.result
+            result["part6"]["Training Risk"]["result"] = part_6_2_func(q_6_2_1, q_6_2_2).name
+            props.setResult(result)
+
             return (
                 <ResultComponent 
                 name="Training Risk"
@@ -66,8 +76,12 @@ export default function Part6(props) {
     }
 
     const part_6_3_result = () => {
-        if (q_6_2_3 != 0) {
+        if (q_6_2_3 !== 0) {
             q_6_3 = part_6_3_func(props.q4_2, q_6_2_3).number
+
+            let result = props.result
+            result["part6"]["Methodology Risk"]["result"] = part_6_3_func(props.q4_2, q_6_2_3).name
+            props.setResult(result)
             return (
                 <ResultComponent 
                 name="Methodology Risk"
@@ -78,22 +92,24 @@ export default function Part6(props) {
     }
 
     const part_6_4_result = () => {
-        if (q_6_3 != 0 && q_6_1_3 != 0) {
-            console.log(q_6_3, q_6_1_3)
+        if (q_6_3 !== 0 && q_6_1_3 !== 0) {
+            let result = props.result
+            result["part6"]["Overall Technical Bias Risk"]["result"] = part_6_4_func(q_6_1_3, q_6_3).name
+            props.setResult(result)
+
             return (
 
                 <ResultComponent 
                 name="Overall Technical Bias Risk"
                 result={part_6_4_func(q_6_1_3, q_6_3).name} 
                 />
-              
             )
         }
     }
 
     return (
         <>
-            <FormWrapper handleSubmit={handleSubmit} title="Test Title" description="test description">
+            <FormWrapper handleSubmit={handleSubmit} title="Risk of Technical Bias" description="In this section, technical bias represents only bias surrounding data accuracy and data representativeness (or lack of). Technical bias in the use of algorithms can be addressed.">
                 {part_6_1.map((question) => (
                     <RadioWrapper key={question.step} name={question.name} description={question.description} onChangeValue={onChangeValue}>
                         {question.options.map((option) => (
@@ -101,7 +117,6 @@ export default function Part6(props) {
                         ))}
                     </RadioWrapper>
                 ))}
-                {part_6_1_result()}
 
                 {part_6_2.map((question) => (
                     <RadioWrapper key={question.step} name={question.name} description={question.description} onChangeValue={onChangeValue}>
@@ -110,6 +125,8 @@ export default function Part6(props) {
                         ))}
                     </RadioWrapper>
                 ))}
+                
+                {part_6_1_result()}
                 {part_6_2_result()}
                 {part_6_3_result()}
                 {part_6_4_result()}

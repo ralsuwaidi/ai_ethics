@@ -5,7 +5,7 @@ import RadioWrapper from "../components/RadioWrapper";
 import ResultComponent from "../components/ResultComponent";
 import { part_3_1, part_3_2  ,part_3_2_func, part_3_3_func } from "./part3_data";
 
-export default function Part3() {
+export default function Part3(props) {
     const [q_3_1, setq_3_1] = useState(0)
     const [q_3_2_1, setq_3_2_1] = useState(0)
     const [q_3_2_2, setq_3_2_2] = useState(0)
@@ -35,8 +35,13 @@ export default function Part3() {
     }
 
     const part_3_2_result = () => {
-        if (q_3_2_2 != 0 && q_3_2_1 != 0) {
+        if (q_3_2_2 !== 0 && q_3_2_1 !== 0) {
             q_3_2_3 = part_3_2_func(q_3_2_1, q_3_2_2).number
+
+            let result = props.result
+            result["part3"]["Assign Accessibility Score"]["result"] = part_3_2_func(q_3_2_1, q_3_2_2).name
+            props.setResult(result)
+
             return (
                 <ResultComponent 
                 name="Assign Accessibility Score"
@@ -47,7 +52,12 @@ export default function Part3() {
     }
 
     const part_3_3_result = () => {
-        if (q_3_2_3 != 0 && q_3_1 != 0) {
+        if (q_3_2_3 !== 0 && q_3_1 !== 0) {
+
+            let result = props.result
+            result["part3"]["Assign Accountability Risk"]["result"] = part_3_3_func(q_3_2_3, q_3_1).name
+            props.setResult(result)
+
             return (
                 <ResultComponent 
                 name="Assign Accountability Risk"
@@ -59,7 +69,7 @@ export default function Part3() {
 
     return (
         <>
-            <FormWrapper handleSubmit={handleSubmit} title="Test Title" description="test description">
+            <FormWrapper handleSubmit={handleSubmit} title="Assess Cccountability Risk" description="Accountability in the use of algorithms can be addressed by exploring the following questions: Who or what made what decisions? How were those decisions made? and so on...">
                 {part_3_1.map((question) => (
                     <RadioWrapper key={question.step} name={question.name} description={question.description} onChangeValue={onChangeValue}>
                         {question.options.map((option) => (
