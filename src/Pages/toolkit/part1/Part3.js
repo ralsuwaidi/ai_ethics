@@ -69,7 +69,7 @@ export default function Part3(props) {
 
     return (
         <>
-            <FormWrapper handleSubmit={handleSubmit} title="Assess Cccountability Risk" description="Accountability in the use of algorithms can be addressed by exploring the following questions: Who or what made what decisions? How were those decisions made? and so on...">
+            <FormWrapper handleSubmit={handleSubmit} title="Assess Accountability Risk" description="Accountability in the use of algorithms can be addressed by exploring the following questions: Who or what made what decisions? How were those decisions made? and so on...">
                 {part_3_1.map((question) => (
                     <RadioWrapper key={question.step} name={question.name} description={question.description} onChangeValue={onChangeValue}>
                         {question.options.map((option) => (

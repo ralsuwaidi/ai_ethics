@@ -29,7 +29,7 @@ export default function FormWrapper(props) {
           </div>
           <div className="mt-5 md:col-span-2 md:mt-0">
             <form onSubmit={props.handleSubmit}>
-              <div className="shadow sm:overflow-hidden sm:rounded-md">
+              <div className="border sm:overflow-hidden sm:rounded-md">
                 <div className="space-y-6 bg-white px-4 py-5 sm:p-6">
                   {props.children}
                 </div>
