@@ -11,6 +11,7 @@ import EventDetailView from "./Pages/EventDetailView";
 
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Toolkit from "./Pages/toolkit";
+import Login from "./Pages/login";
 
 
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
@@ -21,6 +22,11 @@ const router = createHashRouter([
   {
     path: "/",
     element: <Toolkit />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
     errorElement: <ErrorPage />,
   }
 ]);
